@@ -1,8 +1,8 @@
 def fizzbuzz(number)
-  case number
-  when 3
+  if number%3 == 0
   	"fizz"
-  when 5
+  elsif number == 5
   	"buzz"
   end
+  
 end
