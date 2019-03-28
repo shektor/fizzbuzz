@@ -12,5 +12,9 @@ describe "fizzbuzz" do
   it "return 'fizz' when number is a multiple of 3" do
     expect(fizzbuzz(9)).to eq "fizz"
   end
+  
+  it "return 'fizz' when number is a multiple of 5" do
+    expect(fizzbuzz(25)).to eq "buzz"
+  end
 
 end
