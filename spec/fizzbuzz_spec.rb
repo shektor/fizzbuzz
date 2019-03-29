@@ -2,6 +2,9 @@ require 'fizzbuzz'
 
 describe "fizzbuzz" do
 
+  multiples_3 = []
+  100.times {|n| multiples_3 << n if n%3 == 0 and n%5 != 0}
+
   it "return 'fizz' when number equals 3" do
     expect(fizzbuzz(3)).to eq "fizz"
   end
@@ -24,6 +27,10 @@ describe "fizzbuzz" do
 
   it "return 1 when number is 1" do
     expect(fizzbuzz(1)).to eq 1
+  end
+
+  it "return 'fizz' for multiples of 3 from 0 to 100" do
+    multiples_3.each {|n| expect(fizzbuzz(n)).to eq "fizz"}
   end
 
 end
